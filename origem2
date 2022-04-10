@@ -111,23 +111,23 @@ int main()
 	if (view1)
 	{
 
-		view = glm::LookAt(glm::vec3(0.0, 0.0, 3.0), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));    
+		view = glm::lookAt(glm::vec3(0.0, 0.0, 3.0), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));    
 	}
 	else if (view2)  
 	{
-		view = glm::LookAt(glm::vec3(0.0f, 0.0f, -3.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));  
+		view = glm::lookAt(glm::vec3(0.0f, 0.0f, -3.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));  
 	}
 	else if (view3)
 	{
-		view = glm::LookAt(glm::vec3(0.0f, 0.0f, -3.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		view = glm::lookAt(glm::vec3(0.0f, 0.0f, -3.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 	}
 	else if (view4)
 	{
-		view = glm::LookAt(glm::vec3(-3.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		view = glm::lookAt(glm::vec3(-3.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 	}
 	else if (view5)
 	{
-		view = glm::LookAt(glm::vec3(0.0f, 3.0f, 0.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 1.0f));
+		view = glm::lookAt(glm::vec3(0.0f, 3.0f, 0.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 1.0f));
 	}
 
 	// Loop da aplicação - "game loop"
@@ -245,7 +245,7 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 
 		if (key == GLFW_KEY_3 && action == GLFW_PRESS)
 		{
-			view1 = true;
+			view1 = false;
 			view2 = false;
 			view3 = true;
 			view4 = false;
@@ -253,7 +253,7 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 		}
 		if (key == GLFW_KEY_4 && action == GLFW_PRESS)
 		{
-			view1 = true;
+			view1 = false;
 			view2 = false;
 			view3 = false;
 			view4 = true;
@@ -261,7 +261,7 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 		}
 		if (key == GLFW_KEY_5 && action == GLFW_PRESS)
 		{
-			view1 = true;
+			view1 = false;
 			view2 = false;
 			view3 = false;
 			view4 = false;
